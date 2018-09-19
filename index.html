@@ -163,10 +163,16 @@
         // N Color
         squareVertexColorBuffer = gl.createBuffer();
         gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexColorBuffer);
-        colors = [];
-        for (var i=0; i < 8; i++) {
-            colors = colors.concat([1.0, 1.0, 1.0, 1.0]);
-        }
+        var colors = [
+          0.72, 0.92, 0.4, 1.0,
+          0.72, 0.92, 0.4, 1.0,
+          0.0, 0.64, 0.53, 1.0,
+          0.0, 0.64, 0.53, 1.0,
+          0.0, 0.52, 0.66, 1.0,
+          0.0, 0.52, 0.66, 1.0,
+          0.0, 0.74, 0.77, 1.0,
+          0.0, 0.74, 0.77, 1.0
+        ]
         gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
         squareVertexColorBuffer.itemSize = 4;
         squareVertexColorBuffer.numItems = 8;
